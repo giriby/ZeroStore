@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Zero Store - Sunucu Paketleri & Satın Alım</title>
+<style>
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  body {
+    background-color: #000;
+    color: #eee;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  a {
+    color: #00cfff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    color: #0099cc;
+  }
+
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: rgba(10,10,10,0.95);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    box-shadow: 0 2px 10px #00cfff33;
+  }
+
+  .logo {
+    font-weight: 900;
+    font-size: 1.9rem;
+    letter-spacing: 3px;
+    color: #00cfff;
+    user-select: none;
+    cursor: default;
+  }
+
+  nav {
+    display: flex;
+    gap: 28px;
+  }
+  nav a {
+    font-size: 1rem;
+    padding: 7px 12px;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+  nav a:hover {
+    border-color: #00cfff;
+    background: #002a3b;
+  }
+
+  main {
+    padding: 110px 40px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  main h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #00d4ff;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  main p.lead {
+    max-width: 650px;
+    margin: 0 auto 50px;
+    color: #bbb;
+    font-size: 1.15rem;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .section-title {
+    color: #00b8ff;
+    font-weight: 900;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #00b8ff;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .packages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 28px;
+    margin-bottom: 50px;
+  }
+
+  .package {
+    background: #111111ee;
+    border-radius: 18px;
+    padding: 28px 24px 40px;
+    box-shadow: 0 0 12px #00d4ff44;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .package:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 28px #00d4ffcc;
+  }
+
+  .package img {
+    width: 110px;
+    margin-bottom: 18px;
+    user-select: none;
+  }
+  .package h3 {
+    color: #00d4ff;
+    font-weight: 900;
+    font-size: 1.55rem;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+  .package ul {
+    list-style: none;
+    color: #ccc;
+    margin-bottom: 26px;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+  .package ul li {
+    margin-bottom: 8px;
+  }
+  .price {
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: #00ffff;
+    margin-bottom: 18px;
+  }
+  .package button {
+    background-color: #00d4ff;
+    border: none;
+    padding: 13px 35px;
+    border-radius: 32px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    cursor: pointer;
+    color: #000;
+    transition: background-color 0.3s ease;
+  }
+  .package button:hover {
+    background-color: #009ecb;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Zero Store</div>
+  <nav>
+    <a href="#sunucupaketleri">Sunucu Paketleri</a>
+    <a href="#satinalim">Developer Hizmetleri</a>
+    <a href="https://discord.gg/zerostore" target="_blank" rel="noopener noreferrer">Destek</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Zero Store - En Güvenilir Sunucu Paketleri & Satın Alım</h1>
+  <p class="lead">Sunucunuz için kaliteli paketler ve esnek satın alım seçenekleri ile yanınızdayız.</p>
+
+  <!-- SUNUCU PAKETLERİ -->
+  <section id="sunucupaketleri">
+    <h2 class="section-title">Sunucu Paketleri</h2>
+    <div class="packages">
+      <div class="package">
+        <img src="https://media.discordapp.net/attachments/1303436170927018125/1379777642877947996/Zero_Store-Photoroom.png?ex=68417991&is=68402811&hm=e08686ac2acdcdd805be37243988133dd80510ab537783779dd38f26a546f8b2&=&format=webp&quality=lossless" alt="Türk Tema" />
+        <h3>Non Whitelisted Paket</h3>
+        <ul>
+          <li>✔Full Fix Paket</li>
+          <li>✔QBCore /ESX Altyapı</li>
+          <li>✔Non Whitelisted Destekli</li>
+          <li>✔Meslekler (Legal + İlegal)</li>
+        </ul>
+        <div class="price">₺2500</div>
+        <button onclick="alert('Türk Tema satın almak için destek kanalımıza Discord üzerinden ulaşabilirsiniz!')">Satın Al</button>
+      </div>
+      <div class="package">
+        <img src="https://media.discordapp.net/attachments/1303436170927018125/1379777642877947996/Zero_Store-Photoroom.png?ex=68417991&is=68402811&hm=e08686ac2acdcdd805be37243988133dd80510ab537783779dd38f26a546f8b2&=&format=webp&quality=lossless" alt="Non WL Paketler" />
+        <h3>Türk Tema Paket</h3>
+        <ul>
+          <li>✔Modern Türkçe UI</li>
+          <li>✔Rol Bazlı Meslekler</li>
+          <li>✔Market+Kıyafet+Galeri</li>
+        </ul>
+        <div class="price">₺1700</div>
+        <button onclick="alert('Non WL Paket satın almak için destek kanalımıza Discord üzerinden ulaşabilirsiniz!')">Satın Al</button>
+      </div>
+      <div class="package">
+        <img src="https://media.discordapp.net/attachments/1303436170927018125/1379777642877947996/Zero_Store-Photoroom.png?ex=68417991&is=68402811&hm=e08686ac2acdcdd805be37243988133dd80510ab537783779dd38f26a546f8b2&=&format=webp&quality=lossless" alt="Gun RP Paketi" />
+        <h3>Gun RP Paketi</h3>
+        <ul>
+          <li>✔Optimize Silah Sistemi</li>
+          <li>✔Kill+Death+Skor Sistemi</li>
+          <li>✔Pvp Araç & Alan</li>
+        </ul>
+        <div class="price">₺1200</div>
+        <button onclick="alert('Gun RP Paketi satın almak için destek kanalımıza Discord üzerinden ulaşabilirsiniz!')">Satın Al</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SATIN ALIM -->
+  <section id="satinalim">
+    <h2 class="section-title">Developer Hizmetleri</h2>
+    <div class="packages">
+      <div class="package">
+        <img src="https://media.discordapp.net/attachments/1303436170927018125/1379777642877947996/Zero_Store-Photoroom.png?ex=68417991&is=68402811&hm=e08686ac2acdcdd805be37243988133dd80510ab537783779dd38f26a546f8b2&=&format=webp&quality=lossless" alt="Haftalık Satın Alım" />
+        <h3>Haftalık Satın Alım</h3>
+        <ul>
+          <li>✔Tüm Sorunlar Fixlenir</li>
+          <li>✔Full Destek</li>
+          <li>✔Hızlı Teslimat</li>
+        </ul>
+        <div class="price">₺850</div>
+        <button onclick="alert('Haftalık satın alım için Discord destek kanalımıza ulaşabilirsiniz!')">Satın Al</button>
+      </div>
+      <div class="package">
+        <img src="https://media.discordapp.net/attachments/1303436170927018125/1379777642877947996/Zero_Store-Photoroom.png?ex=68417991&is=68402811&hm=e08686ac2acdcdd805be37243988133dd80510ab537783779dd38f26a546f8b2&=&format=webp&quality=lossless" alt="Aylık Satın Alım" />
+        <h3>Aylık Satın Alım</h3>
+        <ul>
+          <li>✔Tüm Sorunlar Fixlenir</li>
+          <li>✔Premium Destek</li>
+          <li>✔Hızlı Teslimat</li>
+        </ul>
+        <div class="price">₺4000</div>
+        <button onclick="alert('Aylık satın alım için Discord destek kanalımıza ulaşabilirsiniz!')">Satın Al</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>
